@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="verification" content="bacb74fbd2092e56d140909d788b3e11" />
+
+  <title>Fragrance.bio – Best Fragrances &amp; Perfume Buying Guides (2025)</title>
+  <meta name="description"
+        content="Independent fragrance buying guides and editorial comparisons for 2025. Find a scent for everyday, office, date night, summer, winter, and gifts — with clear star ratings and trusted links." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.fragrance.bio/" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* ===== Consent (HARD) ===== */
+    body.consent-locked {
+      overflow: hidden !important;
+      touch-action: none !important;
+    }
+    .consent-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none; /* shown via JS */
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .consent-overlay[aria-hidden="false"] { display: flex; }
+
+    .consent-modal {
+      width: 100%;
+      max-width: 720px;
+      background: #0b1220;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .consent-header { padding: 18px 18px 0 18px; }
+    .consent-title {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+    }
+    .consent-body {
+      padding: 14px 18px 18px 18px;
+      line-height: 1.55;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .consent-body p { margin: 10px 0; }
+    .consent-list { margin: 12px 0 0 0; padding-left: 18px; }
+    .consent-list li { margin: 6px 0; }
+    .consent-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 16px 18px 18px 18px;
+      background: rgba(2, 6, 23, 0.5);
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .consent-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .consent-accept { background: #ec4899; color: #0b1220; }
+    .consent-reject {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    .consent-links {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .consent-links a { color: #93c5fd; text-decoration: none; }
+    .consent-links a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Consent + GA loader (GA4 loads only AFTER accept) -->
+  <script>
+    (function () {
+      const CONSENT_KEY = "ronarn_consent_analytics_v1";
+      const GA_ID = "G-PASTE-YOUR-GA4-ID"; /* TODO: paste your GA4 Measurement ID (shared across all four domains) */
+
+      function lockPage() {
+        document.body.classList.add("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "false");
+      }
+
+      function unlockPage() {
+        document.body.classList.remove("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "true");
+      }
+
+      function loadGA4() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, { anonymize_ip: true });
+      }
+
+      function setConsent(value) { localStorage.setItem(CONSENT_KEY, value); }
+      function getConsent() { return localStorage.getItem(CONSENT_KEY); }
+      function clearConsent() { localStorage.removeItem(CONSENT_KEY); }
+
+      window.__openPrivacySettings = function () {
+        clearConsent();
+        window.location.reload();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const saved = getConsent();
+
+        if (saved === "accepted") { loadGA4(); unlockPage(); return; }
+        if (saved === "rejected") { unlockPage(); return; }
+
+        lockPage();
+
+        const btnAccept = document.getElementById("consent-accept");
+        const btnReject = document.getElementById("consent-reject");
+
+        btnAccept.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA4();
+          unlockPage();
+        });
+
+        btnReject.addEventListener("click", function () {
+          setConsent("rejected");
+          unlockPage();
+        });
+      });
+    })();
+  </script>
+</head>
+
+<body class="consent-locked">
+  <!-- HARD Consent Overlay -->
+  <div id="consent-overlay" class="consent-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Privacy choices">
+    <div class="consent-modal">
+      <div class="consent-header">
+        <h2 class="consent-title">Privacy choices</h2>
+      </div>
+      <div class="consent-body">
+        <p>
+          Fragrance.bio uses <strong>analytics</strong> to understand which pages are useful and which topics people search for.
+          This helps us improve guides and keep comparisons accurate.
+        </p>
+        <ul class="consent-list">
+          <li><strong>If you accept:</strong> we load Google Analytics (GA4) to measure visits and basic usage trends.</li>
+          <li><strong>If you reject:</strong> the site still works normally, but we do not load analytics.</li>
+        </ul>
+        <p>
+          Some links may be commercial links, but acceptance is only about <strong>analytics</strong>.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <button id="consent-accept" class="consent-btn consent-accept" type="button">Accept analytics</button>
+        <button id="consent-reject" class="consent-btn consent-reject" type="button">Reject</button>
+
+        <div class="consent-links">
+          <span>Learn more:</span>
+          <a href="/privacy.html">Privacy</a>
+          <span>·</span>
+          <a href="/disclosure.html">Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-name">Fragrance.bio</div>
+        <div class="brand-tagline">
+          Independent fragrance buying guides — no paid rankings, no sponsored placements.
+        </div>
+      </div>
+
+      <div class="trust-tags">
+        <span class="trust-tag">No sponsorships</span>
+        <span class="trust-tag">Editorial ratings</span>
+        <span class="trust-tag">Independent comparisons</span>
+      </div>
+
+      <!-- TABS -->
+      <nav class="tabs" aria-label="Primary">
+        <a class="tab is-active" href="/" aria-current="page">Overview</a>
+        <a class="tab" href="#best">Best Fragrances</a>
+        <a class="tab" href="#men">Men</a>
+        <a class="tab" href="#women">Women</a>
+        <a class="tab" href="#gifts">Gifts</a>
+        <a class="tab" href="#longlasting">Long-lasting</a>
+        <a class="tab" href="https://www.scents.bio/?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network" rel="noopener">Notes</a>
+        <a class="tab" href="/about.html">About</a>
+        <a class="tab" href="/privacy.html">Privacy</a>
+        <a class="tab" href="/disclosure.html">Disclosure</a>
+        <a class="tab" href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div>
+          <h1 id="hero-heading" class="hero-title">
+            Pick a fragrance by goal — and avoid buyer’s regret.
+          </h1>
+
+          <p class="hero-subtitle">
+            Fragrance is personal, but buying doesn’t have to be random. We translate scent notes, performance,
+            and “where it fits” into practical picks you can understand quickly.
+          </p>
+
+          <ul class="hero-list">
+            <li><strong>Everyday:</strong> clean, versatile, low-drama scents.</li>
+            <li><strong>Office:</strong> polite projection and “safe” profiles.</li>
+            <li><strong>Date night:</strong> richer, warmer, more memorable blends.</li>
+            <li><strong>Summer:</strong> fresh citrus, aquatic, airy woods.</li>
+            <li><strong>Winter:</strong> amber, spice, vanilla, deeper woods.</li>
+            <li><strong>Gifts:</strong> high-approval classics with broad appeal.</li>
+          </ul>
+
+          <div class="hero-highlight">
+            Editorial promise: No paid rankings. Ratings are independent and designed to show trade-offs, not hype.
+          </div>
+
+          <div class="hero-actions">
+            <a href="#best" class="btn-primary">
+              See top picks
+              <span class="chevron">›</span>
+            </a>
+
+            <a href="https://www.scents.bio/#families?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+               class="btn-secondary" rel="noopener">
+              Scent families explained
+            </a>
+
+            <a href="https://www.scents.bio/#longevity?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+               class="btn-secondary" rel="noopener">
+              Make fragrance last longer
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <p class="hero-note">
+            New here? Learn the vocabulary once and buying becomes easy:
+            citrus vs woody vs amber, what “EDT/EDP/Parfum” actually changes,
+            and how to match projection to the situation.
+          </p>
+
+          <div class="rating-pill" aria-label="Editorial method">
+            <span class="star">★</span>
+            <span><strong>Editorial ratings</strong>: goal-fit, performance, and usability.</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- TOP PICKS / COMPARISON TABLE -->
+      <section id="best" aria-labelledby="best-heading">
+        <h2 id="best-heading" class="section-title">
+          Top picks — fast comparison (editorial ratings)
+        </h2>
+
+        <p class="section-subtitle">
+          These are placeholder examples to illustrate how we score and compare. Links are commercial links (Amazon tag placeholder).
+          Prices vary, and we do not rank based on commissions.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Shop</th>
+                <th scope="col">Fragrance</th>
+                <th scope="col">Best for</th>
+                <th scope="col">Everyday</th>
+                <th scope="col">Office</th>
+                <th scope="col">Date night</th>
+                <th scope="col">Longevity</th>
+                <th scope="col">Giftability</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr id="pick-1">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Dior+Sauvage+EDP&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Dior Sauvage (EDT/EDP)
+                  <div class="badge-top">Top versatile pick</div>
+                </td>
+                <td><span class="pill-skin">Everyday · date night · broad appeal</span></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Easy to wear; works year-round.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Go lighter on sprays.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Fresh + confident profile.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Strong for many skin types.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Recognizable, widely liked.</div></td>
+              </tr>
+
+              <tr id="pick-2">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Bleu+de+Chanel+EDP&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Bleu de Chanel (EDP)
+                  <div class="badge-top">Best office-safe</div>
+                </td>
+                <td><span class="pill-skin">Office · everyday · clean woods</span></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">A true “default” scent.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">Polished, non-offensive.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Smooth, not loud.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Solid, not extreme.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Premium feel, safe choice.</div></td>
+              </tr>
+
+              <tr id="pick-3">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=YSL+Libre+EDP&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  YSL Libre (EDP)
+                  <div class="badge-top">Best modern floral</div>
+                </td>
+                <td><span class="pill-skin">Everyday · work · gifts</span></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Modern, wearable sweetness.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Works well in most offices.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Better as “confident casual”.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Often performs well.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">High approval gift profile.</div></td>
+              </tr>
+
+              <tr id="pick-4">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Coco+Mademoiselle+EDP&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Chanel Coco Mademoiselle (EDP)
+                  <div class="badge-top">Classic signature</div>
+                </td>
+                <td><span class="pill-skin">Signature · gifts · dressy</span></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Elegant and consistent.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Controlled sprays recommended.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Smooth, elevated vibe.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Often long-lasting.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">A safe premium gift.</div></td>
+              </tr>
+
+              <tr id="pick-5">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Glossier+You+Eau+de+Parfum&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Glossier You (EDP)
+                  <div class="badge-top">Best “skin scent”</div>
+                </td>
+                <td><span class="pill-skin">Everyday · subtle · close-range</span></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">Easy, intimate profile.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">Rarely bothers others.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">More “you” than “wow”.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Varies by skin.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Great if you know their style.</div></td>
+              </tr>
+
+              <tr id="pick-6">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Baccarat+Rouge+540&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Baccarat Rouge 540 (style)
+                  <div class="badge-top">Statement pick</div>
+                </td>
+                <td><span class="pill-skin">Date night · winter · standout</span></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Can be intense for daily use.</div></td>
+                <td><div class="stars">★★☆☆☆</div><div class="rating-score">Not ideal for tight offices.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">Bold and memorable.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">Often very strong.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">High risk if blind-buying.</div></td>
+              </tr>
+
+              <tr id="pick-7">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Sol+de+Janeiro+Cheirosa&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Sol de Janeiro (Cheirosa / body mist)
+                  <div class="badge-top">Best easy gift</div>
+                </td>
+                <td><span class="pill-skin">Gifts · casual · sweet</span></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Fun and approachable.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Depends on workplace vibe.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Playful, cozy sweetness.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Mists vary; reapply.</div></td>
+                <td><div class="stars">★★★★★</div><div class="rating-score">High “smell-good” approval.</div></td>
+              </tr>
+
+              <tr id="pick-8">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/s?k=Le+Labo+Santal+33&tag=YOURTAG-20"
+                     class="btn-compare" target="_blank" rel="nofollow sponsored noopener">
+                    View on Amazon
+                  </a>
+                </td>
+                <td class="brand-col">
+                  Le Labo Santal 33 (style)
+                  <div class="badge-top">Woody niche</div>
+                </td>
+                <td><span class="pill-skin">Woody · minimalist · signature</span></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Distinct but wearable.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Moderate sprays recommended.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Cool, confident vibe.</div></td>
+                <td><div class="stars">★★★★☆</div><div class="rating-score">Often strong on fabric.</div></td>
+                <td><div class="stars">★★★☆☆</div><div class="rating-score">Taste-specific; not universal.</div></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-subtitle">
+          Star ratings are editorial, relative and rounded. They exist to make trade-offs obvious at a glance — not to claim objective “best”.
+        </p>
+      </section>
+
+      <!-- CATEGORY SECTIONS (anchors for tabs) -->
+      <section class="grid" aria-label="Category guides">
+        <article id="men" class="card">
+          <h2>Men – practical picks</h2>
+          <p>
+            The fastest way to buy well: decide if you want <strong>fresh/clean</strong> (office-safe) or <strong>warm/amber</strong> (date-night).
+            Then match strength to your environment.
+          </p>
+          <a href="#best" class="btn-primary">Back to top picks ›</a>
+        </article>
+
+        <article id="women" class="card">
+          <h2>Women – modern signatures</h2>
+          <p>
+            A reliable “signature” usually balances a clear theme (floral, amber, gourmand, fresh) with controlled projection.
+            If you dislike surprises, learn the note families first.
+          </p>
+          <a href="https://www.scents.bio/?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network" class="btn-primary" rel="noopener">Learn scent families ›</a>
+        </article>
+
+        <article id="gifts" class="card">
+          <h2>Gifts – high approval strategy</h2>
+          <p>
+            Gift-buying is about minimizing risk. Choose profiles that are broadly liked and avoid extreme niches unless you know their taste.
+          </p>
+          <a href="#best" class="btn-primary">Use the comparison table ›</a>
+        </article>
+      </section>
+
+      <section id="longlasting" class="card" aria-labelledby="longlasting-heading" style="margin-top: 10px;">
+        <h2 id="longlasting-heading" class="section-title">Long-lasting – what actually works</h2>
+        <p class="section-subtitle">
+          Longevity is a mix of concentration, composition, and skin chemistry. The best “hack” is matching strength to the situation
+          (and applying correctly), not chasing the strongest bottle.
+        </p>
+        <div class="hero-actions" style="margin-top: 14px;">
+          <a href="https://www.scents.bio/#longevity?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-primary" rel="noopener">
+            How to make fragrance last longer
+            <span class="chevron">›</span>
+          </a>
+          <a href="https://www.scents.bio/#layering?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-secondary" rel="noopener">
+            Layering basics
+          </a>
+        </div>
+      </section>
+
+      <!-- EDUCATIONAL BRIDGES TO scents.bio -->
+      <section class="grid" aria-label="Learn fragrance basics">
+        <article class="card">
+          <h2>Scent families</h2>
+          <p>
+            Citrus, woody, amber, gourmand, musky — learn the families once and buying gets dramatically easier.
+          </p>
+          <a href="https://www.scents.bio/#families?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-primary" rel="noopener">
+            Explore scent families ›
+          </a>
+        </article>
+
+        <article class="card">
+          <h2>Notes explained</h2>
+          <p>
+            “Top notes” vs “base notes” is not marketing fluff — it explains why a scent changes over time.
+          </p>
+          <a href="https://www.scents.bio/#notes?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-primary" rel="noopener">
+            Notes explained ›
+          </a>
+        </article>
+
+        <article class="card">
+          <h2>How to make fragrance last</h2>
+          <p>
+            Application, fabric vs skin, and avoiding nose-blindness: simple steps that improve performance immediately.
+          </p>
+          <a href="https://www.scents.bio/#longevity?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-primary" rel="noopener">
+            Longevity guide ›
+          </a>
+        </article>
+      </section>
+
+      <section class="card faq" aria-labelledby="faq-heading" style="margin-top: 24px;">
+        <h2 id="faq-heading" class="section-title">Fragrance FAQ</h2>
+
+        <h3>Is “Parfum” always better than EDP or EDT?</h3>
+        <p>No. Concentration can influence strength, but composition matters more. Some EDTs outperform some Parfums.</p>
+
+        <h3>How many sprays is “safe” for the office?</h3>
+        <p>Start with 1–2. You can add later; you cannot remove an overspray.</p>
+
+        <h3>Do you accept paid placements or sponsored rankings?</h3>
+        <p>No. Links can be commercial, but rankings and ratings are editorial.</p>
+      </section>
+
+      <section class="disclaimer">
+        <p>
+          Fragrance.bio provides informational and comparison content only. Ratings are editorial and intended to highlight trade-offs.
+        </p>
+        <p>
+          Some links may be affiliate links. See our <a href="/disclosure.html">Disclosure</a> for details.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2025 Fragrance.bio – Independent fragrance guides &amp; comparisons.</span>
+      <span>Operated by ronarn AS, Norway. Independent comparisons. No paid rankings.</span>
+      <span>Contact: <a href="mailto:info@fragrance.bio">info@fragrance.bio</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+
+      <span class="footer-links">
+        <a href="/about.html">About</a> ·
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="/disclosure.html">Disclosure</a> ·
+        <a href="/contact.html">Contact</a>
+        <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
+        <a href="https://contactus.bio" target="_blank" rel="noopener">Network Contact</a> ·
+        <a href="https://affiliates.bio" target="_blank" rel="noopener">Affiliates</a> ·
+        <a href="https://advertisement.bio" target="_blank" rel="noopener">Advertisements</a> ·
+        <a href="https://guides.bio" target="_blank" rel="noopener">Editorial Guides</a> ·
+        <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
+        <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a> ·
+        <a href="https://ethics.bio" target="_blank" rel="noopener">Ethics</a> ·
+        <a href="https://standards.bio" target="_blank" rel="noopener">Editorial Standards</a> ·
+        <a href="https://indexing.bio" target="_blank" rel="noopener">Indexing</a> ·
+        <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a> ·
+        <a href="https://disclaimer.bio" target="_blank" rel="noopener">Disclaimer</a> ·
+        <a href="https://disclosure.bio" target="_blank" rel="noopener">Network Disclosure</a> ·
+        <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a>
+        <span> · </span>
+        <a href="#" onclick="window.__openPrivacySettings(); return false;">Privacy settings</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="verification" content="bacb74fbd2092e56d140909d788b3e11" />
+
+  <title>Disclosure &amp; Editorial Policy – Fragrance.bio</title>
+  <meta name="description" content="Affiliate disclosure and editorial policy for Fragrance.bio (independent ratings, no paid rankings, link disclosure)." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.fragrance.bio/disclosure.html" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* ===== Consent (HARD) ===== */
+    body.consent-locked { overflow: hidden !important; touch-action: none !important; }
+    .consent-overlay{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .consent-overlay[aria-hidden="false"]{display:flex}
+    .consent-modal{width:100%;max-width:720px;background:#0b1220;color:#e5e7eb;border:1px solid rgba(148,163,184,.18);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.45);overflow:hidden}
+    .consent-header{padding:18px 18px 0 18px}
+    .consent-title{margin:0;font-size:1.1rem;letter-spacing:.01em}
+    .consent-body{padding:14px 18px 18px 18px;line-height:1.55;color:#cbd5e1;font-size:.95rem}
+    .consent-body p{margin:10px 0}
+    .consent-list{margin:12px 0 0 0;padding-left:18px}
+    .consent-list li{margin:6px 0}
+    .consent-actions{display:flex;gap:10px;flex-wrap:wrap;padding:16px 18px 18px 18px;background:rgba(2,6,23,.5);border-top:1px solid rgba(148,163,184,.14)}
+    .consent-btn{appearance:none;border:0;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:.92rem;letter-spacing:.01em;white-space:nowrap}
+    .consent-accept{background:#ec4899;color:#0b1220}
+    .consent-reject{background:transparent;color:#e5e7eb;border:1px solid rgba(148,163,184,.35)}
+    .consent-links{margin-left:auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.85rem;color:#94a3b8}
+    .consent-links a{color:#93c5fd;text-decoration:none}
+    .consent-links a:hover{text-decoration:underline}
+  </style>
+
+  <!-- Consent + GA loader (GA4 loads only AFTER accept) -->
+  <script>
+    (function () {
+      const CONSENT_KEY = "ronarn_consent_analytics_v1";
+      const GA_ID = "G-PASTE-YOUR-GA4-ID"; /* TODO: paste your GA4 Measurement ID (shared across all four domains) */
+
+      function lockPage() {
+        document.body.classList.add("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "false");
+      }
+
+      function unlockPage() {
+        document.body.classList.remove("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "true");
+      }
+
+      function loadGA4() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, { anonymize_ip: true });
+      }
+
+      function setConsent(value) { localStorage.setItem(CONSENT_KEY, value); }
+      function getConsent() { return localStorage.getItem(CONSENT_KEY); }
+      function clearConsent() { localStorage.removeItem(CONSENT_KEY); }
+
+      window.__openPrivacySettings = function () {
+        clearConsent();
+        window.location.reload();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const saved = getConsent();
+
+        if (saved === "accepted") { loadGA4(); unlockPage(); return; }
+        if (saved === "rejected") { unlockPage(); return; }
+
+        lockPage();
+
+        const btnAccept = document.getElementById("consent-accept");
+        const btnReject = document.getElementById("consent-reject");
+
+        btnAccept.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA4();
+          unlockPage();
+        });
+
+        btnReject.addEventListener("click", function () {
+          setConsent("rejected");
+          unlockPage();
+        });
+      });
+    })();
+  </script>
+</head>
+
+<body class="consent-locked">
+  <!-- HARD Consent Overlay -->
+  <div id="consent-overlay" class="consent-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Privacy choices">
+    <div class="consent-modal">
+      <div class="consent-header">
+        <h2 class="consent-title">Privacy choices</h2>
+      </div>
+      <div class="consent-body">
+        <p>
+          Fragrance.bio uses <strong>analytics</strong> to understand which pages are useful and which topics people search for.
+          This helps us improve guides and keep comparisons accurate.
+        </p>
+        <ul class="consent-list">
+          <li><strong>If you accept:</strong> we load Google Analytics (GA4) to measure visits and basic usage trends.</li>
+          <li><strong>If you reject:</strong> the site still works normally, but we do not load analytics.</li>
+        </ul>
+        <p>
+          Some links may be commercial links, but acceptance is only about <strong>analytics</strong>.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <button id="consent-accept" class="consent-btn consent-accept" type="button">Accept analytics</button>
+        <button id="consent-reject" class="consent-btn consent-reject" type="button">Reject</button>
+
+        <div class="consent-links">
+          <span>Learn more:</span>
+          <a href="/privacy.html">Privacy</a>
+          <span>·</span>
+          <a href="/disclosure.html">Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-name">Fragrance.bio</div>
+        <div class="brand-tagline">
+          Independent fragrance buying guides — no paid rankings, no sponsored placements.
+        </div>
+      </div>
+
+      <div class="trust-tags">
+        <span class="trust-tag">No sponsorships</span>
+        <span class="trust-tag">Editorial ratings</span>
+        <span class="trust-tag">Independent comparisons</span>
+      </div>
+
+      <nav class="tabs" aria-label="Primary">
+        <a class="tab" href="/">Overview</a>
+        <a class="tab" href="/#best">Best Fragrances</a>
+        <a class="tab" href="/#men">Men</a>
+        <a class="tab" href="/#women">Women</a>
+        <a class="tab" href="/#gifts">Gifts</a>
+        <a class="tab" href="/#longlasting">Long-lasting</a>
+        <a class="tab" href="https://www.scents.bio/?utm_source=fragrance.bio&utm_medium=referral&utm_campaign=network" rel="noopener">Notes</a>
+        <a class="tab" href="/about.html">About</a>
+        <a class="tab" href="/privacy.html">Privacy</a>
+        <a class="tab is-active" href="/disclosure.html" aria-current="page">Disclosure</a>
+        <a class="tab" href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="disclosure-heading">
+        <h1 id="disclosure-heading" class="section-title">Affiliate Disclosure &amp; Editorial Policy</h1>
+        <p class="section-subtitle">
+          Fragrance.bio is an independent guide. This page explains how we make money and how we protect editorial integrity.
+        </p>
+
+        <h2 class="section-title" style="margin-top: 14px;">1) Affiliate disclosure</h2>
+        <p class="section-subtitle">
+          Some links on this website are affiliate links. If you click a link and make a purchase, we may earn a commission.
+          This helps fund content creation and site maintenance.
+        </p>
+        <p class="section-subtitle">
+          Affiliate links are marked with attributes such as <code>rel="nofollow sponsored noopener"</code> and open in a new tab.
+        </p>
+
+        <h2 class="section-title" style="margin-top: 14px;">2) No paid rankings</h2>
+        <p class="section-subtitle">
+          We do not accept payment for placement in our tables, lists, or rankings. We do not sell “#1” spots.
+        </p>
+
+        <h2 class="section-title" style="margin-top: 14px;">3) How ratings work</h2>
+        <p class="section-subtitle">
+          Our star ratings are editorial and relative. They are designed to highlight trade-offs quickly (goal-fit, usability, and typical performance),
+          not to claim objective truth for every individual.
+        </p>
+
+        <h2 class="section-title" style="margin-top: 14px;">4) Advertising</h2>
+        <p class="section-subtitle">
+          If we add display ads in the future, we will update this disclosure. Ads will not influence editorial ratings.
+        </p>
+
+        <h2 class="section-title" style="margin-top: 14px;">5) Operator</h2>
+        <p class="section-subtitle">
+          Fragrance.bio is operated by <strong>ronarn AS, Norway</strong>. Contact: <a href="mailto:info@fragrance.bio">info@fragrance.bio</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2025 Fragrance.bio – Independent fragrance guides &amp; comparisons.</span>
+      <span>Operated by ronarn AS, Norway. Independent comparisons. No paid rankings.</span>
+      <span>Contact: <a href="mailto:info@fragrance.bio">info@fragrance.bio</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+
+      <span class="footer-links">
+        <a href="/about.html">About</a> ·
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="/disclosure.html">Disclosure</a> ·
+        <a href="/contact.html">Contact</a>
+        <span> · </span>
+        <a href="#" onclick="window.__openPrivacySettings(); return false;">Privacy settings</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
